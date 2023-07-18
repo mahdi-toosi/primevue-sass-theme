@@ -12,8 +12,10 @@
         border-top-left-radius: $borderRadius;
 
         .p-dialog-title {
-            font-weight: $dialogHeaderFontWeight;
+            word-break: break-word;
+            margin-right: $inlineSpacing;
             font-size: $dialogHeaderFontSize;
+            font-weight: $dialogHeaderFontWeight;
         }
 
         .p-dialog-header-icon {
@@ -61,4 +63,13 @@
             margin-left: $inlineSpacing * 2;
         }
     }
+}
+
+html[dir="rtl"] {
+	.p-dialog {
+		.p-dialog-title {
+            margin-right: unset;
+			margin-left: $inlineSpacing;
+		}
+	}
 }
