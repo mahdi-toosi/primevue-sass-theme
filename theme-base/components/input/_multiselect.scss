@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 .p-multiselect {
     background: $inputBg;
@@ -44,7 +44,7 @@
         border-top-right-radius: $borderRadius;
         border-bottom-right-radius: $borderRadius;
     }
-    
+
     &.p-invalid.p-component {
         @include invalid-input();
     }
@@ -158,9 +158,30 @@
         &:not(.p-disabled):hover {
             background-color: $inputFilledHoverBg;
         }
-    
+
         &:not(.p-disabled).p-focus {
             background-color: $inputFilledFocusBg;
+        }
+    }
+}
+
+html[dir="rtl"] {
+    .p-multiselect-panel {
+        .p-multiselect-items .p-multiselect-item .p-checkbox {
+            margin-right: unset;
+            margin-left: $inlineSpacing;
+        }
+
+        .p-multiselect-header {
+            .p-checkbox {
+                margin-right: unset;
+                margin-left: $inlineSpacing;
+            }
+
+            .p-multiselect-close {
+                margin-right: $inlineSpacing;
+                margin-left: unset;
+            }
         }
     }
 }
